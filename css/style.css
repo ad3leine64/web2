@@ -1,0 +1,1721 @@
+
+/* ==================================================
+   INFANCIA SANA
+   HOJA DE ESTILOS PRINCIPAL
+================================================== */
+
+
+/* ==================================================
+   01. VARIABLES DE COLOR
+================================================== */
+
+:root {
+    --azul-principal: #285E85;
+    --blanco: #F9F9F4;
+    --texto: #333333;
+}
+
+
+/* ==================================================
+   02. TIPOGRAFÍAS - FRUTIGER LT STD
+================================================== */
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-Roman.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-UltraBlack.otf') format('opentype');
+    font-weight: 950;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../assets/fonts/FrutigerLTStd-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* ==================================================
+   03. TIPOGRAFÍAS CONDENSADAS
+================================================== */
+
+@font-face {
+    font-family: 'Frutiger Condensed';
+    src: url('../assets/fonts/FrutigerLTStd-Cn.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Frutiger Condensed';
+    src: url('../assets/fonts/FrutigerLTStd-LightCn.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Frutiger Condensed';
+    src: url('../assets/fonts/FrutigerLTStd-BoldCn.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Frutiger Condensed';
+    src: url('../assets/fonts/FrutigerLTStd-BlackCn.otf') format('opentype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Frutiger Condensed';
+    src: url('../assets/fonts/FrutigerLTStd-ExtraBlackCn.otf') format('opentype');
+    font-weight: 950;
+}
+
+
+/* ==================================================
+   04. CONFIGURACIÓN GENERAL
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    color: var(--texto);
+    background-color: var(--blanco);
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   05. HEADER
+================================================== */
+
+.header {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3.55 / 1;
+    min-height: 230px;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--blanco);
+}
+
+
+/* ==================================================
+   06. FOTOGRAFÍA, DEGRADADO Y TEXTURA
+================================================== */
+
+.header-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Fotografía principal */
+
+.header-background > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Degradado PNG */
+
+.header-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background-image: url('../assets/images/home_header_gradient.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+}
+
+/* Textura PNG */
+
+.header-texture {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background-image: url('../assets/images/home_header_texture.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   07. INFORMACIÓN DE CONTACTO - IZQUIERDA
+================================================== */
+
+.header-contact {
+    position: absolute;
+    top: 3%;
+    left: 4.5%;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-contact a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--blanco);
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(8px, 0.75vw, 12px);
+    font-weight: 700;
+}
+
+.header-contact img {
+    display: block;
+    width: clamp(12px, 1.1vw, 17px);
+    height: clamp(12px, 1.1vw, 17px);
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   08. REDES SOCIALES - DERECHA
+================================================== */
+
+.header-social {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.header-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-social img {
+    display: block;
+    width: clamp(13px, 1.2vw, 19px);
+    height: clamp(13px, 1.2vw, 19px);
+    object-fit: contain;
+
+    transition: opacity 0.2s ease;
+}
+
+.header-social a:hover img {
+    opacity: 0.7;
+}
+
+
+/* ==================================================
+   09. NAVEGACIÓN Y LOGO
+================================================== */
+
+.navbar {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 10%;
+    left: 4.5%;
+    display: block;
+    pointer-events: auto;
+}
+
+.logo img {
+    display: block;
+    width: clamp(85px, 10.5vw, 145px);
+    height: auto;
+}
+
+/* Menú */
+
+.nav-links {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 30px);
+
+    list-style: none;
+    pointer-events: auto;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(9px, 0.9vw, 14px);
+    font-weight: 700;
+
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+
+/* ==================================================
+   10. TEXTO PRINCIPAL DEL HEADER
+================================================== */
+
+.header-content {
+    position: absolute;
+    top: 40%;
+    left: 20.9%;
+    z-index: 4;
+
+    width: 38%;
+    color: var(--blanco);
+}
+
+/* Título: Frutiger UltraBlack */
+
+.header-content h1 {
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(18px, 2vw, 30px);
+    font-weight: 950;
+    line-height: 1.1;
+}
+
+/* Descripción: Frutiger Light */
+
+.header-content p {
+    max-width: 520px;
+    margin-top: 0.6vw;
+
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(9px, 0.8vw, 13px);
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+/* Botón LEER MÁS */
+
+.header-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.2vw;
+    padding: 0.7vw 2.4vw;
+
+    background-color: var(--azul-principal);
+    border-radius: 9px;
+
+    color: var(--blanco);
+    text-decoration: none;
+
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(8px, 0.85vw, 13px);
+    font-weight: 700;
+
+    transition: background-color 0.2s ease;
+}
+
+.header-button:hover {
+    background-color: #194766;
+}
+
+
+/* ==================================================
+   11. CONTENIDO PRINCIPAL
+================================================== */
+
+main {
+    width: 100%;
+}
+
+main section {
+    width: 100%;
+    padding: 60px 8%;
+}
+
+main h2 {
+    margin-bottom: 15px;
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+}
+
+
+/* ==================================================
+   12. FOOTER
+================================================== */
+
+footer {
+    width: 100%;
+    padding: 25px 8%;
+
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+
+    font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   13. RESPONSIVE - TABLETS
+================================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        aspect-ratio: 1.2 / 1;
+        min-height: 400px;
+    }
+
+    /* Contacto */
+
+    .header-contact {
+        top: 3%;
+        left: 5%;
+        gap: 10px;
+    }
+
+    .header-contact a {
+        font-size: 9px;
+    }
+
+    /* Redes */
+
+    .header-social {
+        top: 3%;
+        right: 5%;
+        gap: 9px;
+    }
+
+    /* Logo */
+
+    .logo {
+        top: 16%;
+        left: 5%;
+    }
+
+    .logo img {
+        width: clamp(85px, 18vw, 125px);
+    }
+
+    /* Navegación */
+
+    .nav-links {
+        top: 30%;
+        left: 5%;
+        right: 5%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    /* Texto */
+
+    .header-content {
+        top: 50%;
+        left: 8%;
+        width: 80%;
+    }
+
+    .header-content h1 {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+
+    .header-content p {
+        font-size: 12px;
+    }
+}
+
+
+/* ==================================================
+   14. RESPONSIVE - CELULARES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        aspect-ratio: auto;
+        min-height: 420px;
+    }
+
+    /* Contacto */
+
+    .header-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    /* Redes */
+
+    .header-social {
+        top: 4%;
+        gap: 7px;
+    }
+
+    /* Navegación */
+
+    .nav-links {
+        top: 29%;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    /* Texto */
+
+    .header-content {
+        top: 48%;
+    }
+
+    .header-content h1 {
+        font-size: 25px;
+    }
+
+    .header-content p {
+        font-size: 11px;
+    }
+
+    .header-button {
+        padding: 9px 24px;
+        font-size: 10px;
+    }
+}
+
+
+/* ==================================================
+   15. NEWSLETTER
+================================================== */
+
+.newsletter {
+    width: 100%;
+    padding: 55px 10%;
+    background-color: #285E85;
+    color: #F9F9F4;
+}
+
+.newsletter-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    max-width: 1150px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* TEXTO DEL NEWSLETTER */
+
+.newsletter-text {
+    padding-top: 15px;
+}
+
+.newsletter-text h2 {
+    font-size: clamp(21px, 2.3vw, 29px);
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.newsletter-text h2 span {
+    display: block;
+    color: #94A378;
+    font-size: clamp(32px, 4.2vw, 48px);
+    font-weight: 950;
+}
+
+.newsletter-text p {
+    margin-top: 8px;
+    max-width: 390px;
+    font-size: clamp(13px, 1.2vw, 17px);
+    line-height: 1.4;
+}
+
+/* FORMULARIO */
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-group label span {
+    color: #94A378;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 36px;
+    padding: 5px 12px 5px 36px;
+    border: none;
+    outline: none;
+    background-color: #F9F9F4;
+    color: #333333;
+    font-family: 'Frutiger', sans-serif;
+    font-size: 14px;
+}
+
+.input-wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* CHECKBOX */
+
+.newsletter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.newsletter-checkbox input {
+    appearance: none;
+    width: 21px;
+    height: 21px;
+    border: 1.5px solid #94A378;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.newsletter-checkbox input:checked {
+    background-color: #94A378;
+    box-shadow: inset 0 0 0 4px #285E85;
+}
+
+
+/* ==================================================
+   16. FOOTER
+================================================== */
+
+.footer {
+    width: 100%;
+    padding: 48px 9% 30px;
+    background-color: #102B43;
+    color: #F9F9F4;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+/* LOGO Y MARCA */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    display: block;
+    width: 125px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* REDES SOCIALES */
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 14px;
+    margin-left: -2px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.footer-social a:hover img {
+    opacity: 0.6;
+}
+
+/* DATOS DE CONTACTO */
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px 18px;
+    margin-top: 14px;
+}
+
+.footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #F9F9F4;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-contact img {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* NAVEGACIÓN DEL FOOTER */
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 14px 30px;
+    padding-bottom: 48px;
+}
+
+.footer-nav a {
+    color: #F9F9F4;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.65;
+}
+
+
+/* ==================================================
+   17. RESPONSIVE NEWSLETTER Y FOOTER
+================================================== */
+
+@media (max-width: 768px) {
+
+    .newsletter {
+        padding: 40px 7%;
+    }
+
+    .newsletter-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .newsletter-text {
+        padding-top: 0;
+    }
+
+    .newsletter-form {
+        gap: 18px;
+    }
+
+    .footer {
+        padding: 40px 7% 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-nav {
+        justify-content: flex-start;
+        padding-bottom: 0;
+        gap: 15px 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .newsletter {
+        padding: 35px 6%;
+    }
+
+    .newsletter-text h2 {
+        font-size: 21px;
+    }
+
+    .newsletter-text h2 span {
+        font-size: 36px;
+    }
+
+    .newsletter-text p {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 35px 6% 25px;
+    }
+
+    .footer-logo {
+        width: 115px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-nav {
+        gap: 15px 18px;
+    }
+
+    .footer-nav a {
+        font-size: 11px;
+    }
+}
+
+
+
+/* ==================================================
+   18. PILARES DE INFANCIA SANA
+================================================== */
+
+/* SECCIÓN GENERAL */
+
+main section.pilares {
+    width: 100%;
+    padding: 0;
+    background-color: #F9F9F4;
+}
+
+/* ENCABEZADO Y ESPACIO BLANCO INICIAL */
+
+.pilares-header {
+    width: 100%;
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+.pilares-header h2 {
+    color: #285E85;
+    font-size: clamp(23px, 3vw, 40px);
+    font-weight: 900;
+    text-align: center;
+
+    border-bottom: 2px solid #285E85;
+    padding-bottom: 3px;
+}
+
+/* BLOQUE AZUL */
+
+.pilares-content {
+    position: relative;
+    width: 100%;
+    min-height: 530px;
+
+    padding: 28px 3.2% 45px;
+
+    background-color: #285E85;
+    color: #F9F9F4;
+}
+
+/* NÚMERO LATERAL */
+
+.pilares-number {
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 128px;
+    height: 58px;
+    padding-right: 12px;
+
+    background-color: #F9F9F4;
+    color: #285E85;
+
+    font-size: 40px;
+    font-weight: 900;
+}
+
+/* TÍTULO CENTRAL */
+
+.pilares-content h3 {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #F9F9F4;
+    font-size: clamp(20px, 2.2vw, 30px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+}
+
+/* GRILLA DE LOS TRES PILARES */
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    max-width: 1250px;
+    margin: 75px auto 0;
+}
+
+/* CADA PILAR */
+
+.pilar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ICONOS */
+
+.pilar-icon {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+    margin-bottom: 20px;
+}
+
+.pilar-icon svg {
+    width: 43px;
+    height: 43px;
+}
+
+/* COLORES DE LOS ICONOS */
+
+.icon-informar {
+    background-color: #F7E8B5;
+    color: #8D7133;
+}
+
+.icon-concientizar {
+    background-color: #A9DDBD;
+    color: #426B50;
+}
+
+.icon-proteger {
+    background-color: #D5E8F5;
+    color: #416C88;
+}
+
+/* TÍTULOS Y DESCRIPCIONES */
+
+.pilar h4 {
+    margin-bottom: 5px;
+
+    color: #F9F9F4;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.pilar p {
+    max-width: 390px;
+
+    color: #F9F9F4;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+/* LÍNEA INFERIOR */
+
+.pilares-line {
+    width: 100%;
+    height: 3px;
+
+    margin-top: 130px;
+
+    background-color: #F9F9F4;
+}
+
+
+/* ==================================================
+   ANIMACIÓN DE LOS PILARES
+================================================== */
+
+/* Elementos que comienzan ocultos */
+.pilares-content > h3,
+.pilares .pilar,
+.pilares-line {
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.22, 0.8, 0.25, 1);
+}
+
+/* Texto principal */
+.pilares.pilares-visible .pilares-content > h3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s;
+}
+
+/* Primer pilar */
+.pilares.pilares-visible .pilar:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+/* Segundo pilar */
+.pilares.pilares-visible .pilar:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+/* Tercer pilar */
+.pilares.pilares-visible .pilar:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+/* Línea inferior */
+.pilares.pilares-visible .pilares-line {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+
+/* ==================================================
+   20. RESPONSIVE - TABLETS
+================================================== */
+
+@media (max-width: 768px) {
+
+    .pilares-header {
+        min-height: 260px;
+    }
+
+    .pilares-number {
+        width: 85px;
+        height: 45px;
+        font-size: 30px;
+    }
+
+    .pilares-content {
+        padding: 85px 5% 35px;
+    }
+
+    .pilares-content h3 {
+        font-size: 23px;
+    }
+
+    .pilares-grid {
+        gap: 20px;
+        margin-top: 55px;
+    }
+
+    .pilar-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .pilar-icon svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .pilar h4 {
+        font-size: 17px;
+    }
+
+    .pilar p {
+        font-size: 13px;
+    }
+
+    .pilares-line {
+        margin-top: 75px;
+    }
+}
+
+
+/* ==================================================
+   21. RESPONSIVE - CELULARES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .pilares-header {
+        min-height: 200px;
+        padding: 35px 20px;
+    }
+
+    .pilares-header h2 {
+        font-size: 22px;
+    }
+
+    .pilares-content {
+        padding: 35px 7%;
+    }
+
+    .pilares-content h3 {
+        font-size: 21px;
+    }
+
+    .pilares-content h3 br {
+        display: none;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 45px;
+    }
+
+    .pilar-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .pilar h4 {
+        font-size: 19px;
+    }
+
+    .pilar p {
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .pilares-line {
+        margin-top: 55px;
+    }
+}
+
+/* ==================================================
+   21. CONOCER PARA PREVENIR
+================================================== */
+
+.prevencion {
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #F9F9F4;
+}
+
+
+
+/* FOTOGRAFÍA DE FONDO */
+
+.prevencion-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.prevencion-background img {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    max-width: none;
+
+    left: 0;
+    top: -25%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center 65%;
+
+    animation: fotoMovimiento 5s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+/* MOVIMIENTO VERTICAL */
+
+@keyframes fotoMovimiento {
+    from {
+        transform: translate3d(0, -8%, 0);
+    }
+
+    to {
+        transform: translate3d(0, 8%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .prevencion-background img {
+        animation: none;
+    }
+}
+
+
+/* CAPA DE DEGRADADO */
+
+.prevencion-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url('../assets/images/home_header_gradient.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+}
+
+/* CONTENIDO */
+
+.prevencion-content {
+    width: 100%;
+    padding: 50px 5% 45px;
+    text-align: center;
+}
+
+.prevencion-content > h2 {
+    margin-bottom: 5px;
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: 400;
+}
+
+.prevencion-intro {
+    max-width: 530px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* ESTADÍSTICAS */
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    align-items: start;
+    gap: 35px;
+
+    max-width: 1150px;
+    margin: 32px auto 0;
+}
+
+.estadistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.estadistica strong {
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.estadistica h3 {
+    margin-top: 3px;
+    font-size: clamp(15px, 1.6vw, 21px);
+    font-weight: 400;
+}
+
+.estadistica-central p {
+    max-width: 250px;
+    margin-top: 8px;
+    font-size: 9px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* ==================================================
+   22. NOVEDADES
+================================================== */
+
+.novedades {
+    width: 100%;
+    padding: 20px 0 25px;
+    overflow: hidden;
+    background-color: #F9F9F4;
+}
+
+/* TÍTULO */
+
+.novedades-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.novedades-heading h2 {
+    color: #94A378;
+    font-size: clamp(35px, 5vw, 58px);
+    font-weight: 950;
+    line-height: 1.2;
+}
+
+/* CONTENEDOR */
+
+.novedades-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    perspective: 1400px;
+}
+
+/* GRILLA: SOLAMENTE TRES POSICIONES */
+
+.novedades-track {
+    display: grid;
+    grid-template-columns: 0.75fr 1.35fr 0.75fr;
+    grid-template-rows: 245px;
+    align-items: center;
+    gap: 5.5%;
+
+    width: 110%;
+    margin-left: -5%;
+
+    transform-style: preserve-3d;
+}
+
+/* TARJETAS */
+
+.novedad-card {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background-color: #E5E5E5;
+
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.novedad-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.novedad-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.novedad-card img:hover {
+    transform: scale(1.03);
+}
+
+/* DESTACADA */
+
+.novedad-destacada {
+    height: 245px;
+}
+
+/* LATERALES */
+
+.novedad-lateral {
+    height: 210px;
+}
+
+/* FLECHAS */
+
+.novedades-flecha {
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #285E85;
+    color: #FFFFFF;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.novedades-flecha.anterior {
+    left: 12px;
+}
+
+.novedades-flecha.siguiente {
+    right: 12px;
+}
+
+.novedades-flecha:hover {
+    background-color: #102B43;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.novedades-flecha:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* INDICADORES */
+
+.novedades-indicadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.novedades-indicadores span {
+    display: block;
+    width: 29px;
+    height: 11px;
+    border-radius: 20px;
+    background-color: #E2E2E2;
+    cursor: pointer;
+    transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+.novedades-indicadores span.activo {
+    width: 38px;
+    background-color: #102B43;
+}
+
+/* ==================================================
+   23. RESPONSIVE - TABLETS
+================================================== */
+
+@media (max-width: 768px) {
+
+    .novedad-card {
+        height: 160px;
+    }
+
+    .novedad-destacada {
+        height: 190px;
+    }
+
+    .novedad-lateral {
+        height: 170px;
+    }
+
+    .novedades-track {
+        gap: 4%;
+        grid-template-rows: 190px;
+    }
+}
+
+/* ==================================================
+   24. RESPONSIVE - CELULARES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .novedades-heading h2 {
+        font-size: 38px;
+    }
+
+    .novedades-track {
+        width: 150%;
+        margin-left: -25%;
+        gap: 5%;
+        grid-template-rows: 160px;
+    }
+
+    .novedad-card {
+        height: 130px;
+    }
+
+    .novedad-destacada {
+        height: 160px;
+    }
+
+    .novedad-lateral {
+        height: 130px;
+    }
+
+    .novedades-indicadores {
+        gap: 7px;
+    }
+
+    .novedades-indicadores span {
+        width: 19px;
+        height: 8px;
+    }
+
+    .novedades-indicadores span.activo {
+        width: 30px;
+    }
+
+    .novedades-flecha {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .novedades-flecha.anterior {
+        left: 7px;
+    }
+
+    .novedades-flecha.siguiente {
+        right: 7px;
+    }
+}
+
+
+/* Ocultar noticias que no están en las tres posiciones */
+
+.novedades-track .novedad-card[hidden] {
+    display: none !important;
+}
+
+/* Evitar desplazamientos extraños durante el carrusel */
+
+.novedades-track {
+    align-items: center;
+}
+
+.novedades-carousel {
+    touch-action: pan-y;
+}
+
+
+/* ==================================================
+   EFECTO HOVER - NOTICIAS
+================================================== */
+
+/* Todas las noticias */
+
+.novedad-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Noticias laterales */
+
+.novedad-card.novedad-lateral:hover {
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+/* Noticia central */
+
+.novedad-card.novedad-destacada:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+/* Evitar que el zoom de la imagen se sume demasiado */
+
+.novedad-card img {
+    transition: transform 0.35s ease;
+}
+
+.novedad-card:hover img {
+    transform: scale(1.04);
+}
+
+/* ==================================================
+   APARICIÓN DEL BLOQUE AZUL AL HACER SCROLL
+================================================== */
+
+.pilares-content {
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.22, 0.8, 0.25, 1);
+}
+
+/* Cuando se activa */
+
+.pilares.pilares-visible .pilares-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================================================
+   ANIMACIÓN INICIAL DEL TÍTULO DE PILARES
+================================================== */
+
+.pilares-header {
+    opacity: 0;
+    transform: translateY(35px);
+    animation: aparecerTitulo 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes aparecerTitulo {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
