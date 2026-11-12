@@ -231,14 +231,27 @@ img {
     gap: 22px;
 }
 
+/* CORREO: CENTRADO RESPECTO AL LOGO */
+.header-contact a:first-child {
+    position: absolute;
+    width: clamp(85px, 10.5vw, 145px);
+    justify-content: center;
+}
+
+/* TELÉFONO: A LA DERECHA DEL CORREO */
+.header-contact a:last-child {
+    margin-left: calc(clamp(85px, 10.5vw, 145px) + 40px);
+    white-space: nowrap;
+}
+
 .header-contact a {
     display: flex;
     align-items: center;
-    gap: 7px;
+    justify-content: center;
+    gap: 8px;
 
     color: var(--blanco);
     text-decoration: none;
-    white-space: nowrap;
 
     font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-size: clamp(8px, 0.75vw, 12px);
@@ -247,11 +260,11 @@ img {
 
 .header-contact img {
     display: block;
+    flex-shrink: 0;
     width: clamp(12px, 1.1vw, 17px);
     height: clamp(12px, 1.1vw, 17px);
     object-fit: contain;
 }
-
 
 /* ==================================================
    08. REDES SOCIALES - DERECHA
@@ -704,6 +717,39 @@ footer {
     box-shadow: inset 0 0 0 4px #285E85;
 }
 
+/* BOTÓN DE SUSCRIPCIÓN */
+
+.newsletter-button {
+    align-self: flex-start;
+
+    padding: 11px 30px;
+
+    border: 2px solid #94A378;
+    border-radius: 7px;
+
+    background-color: #94A378;
+    color: #F9F9F4;
+
+    font-family: 'Frutiger', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.newsletter-button:hover {
+    background-color: transparent;
+    color: #F9F9F4;
+    transform: translateY(-2px);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
 
 /* ==================================================
    16. FOOTER
@@ -730,7 +776,7 @@ footer {
 .footer-brand {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .footer-logo {
@@ -776,18 +822,24 @@ footer {
 
 /* DATOS DE CONTACTO */
 
+.footer-brand {
+    align-items: center;
+}
+
 .footer-contact {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 7px 18px;
+    gap: 7px;
     margin-top: 14px;
 }
 
 .footer-contact a {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
+
     color: #F9F9F4;
     text-decoration: none;
     font-size: 11px;
@@ -830,6 +882,27 @@ footer {
 /* ==================================================
    17. RESPONSIVE NEWSLETTER Y FOOTER
 ================================================== */
+
+@media (min-width: 769px) and (max-width: 950px) {
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-content {
+        gap: 18px;
+    }
+
+    .footer-nav {
+        gap: 10px 16px;
+        padding-bottom: 35px;
+    }
+
+    .footer-nav a {
+        font-size: 11px;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -894,8 +967,7 @@ footer {
     }
 
     .footer-contact {
-        flex-direction: column;
-        align-items: flex-start;
+    align-items: center;
     }
 
     .footer-nav {
@@ -951,7 +1023,7 @@ main section.pilares {
     width: 100%;
     min-height: 530px;
 
-    padding: 28px 3.2% 45px;
+    padding: 85px 3.2% 45px;
 
     background-color: #285E85;
     color: #F9F9F4;
@@ -1421,13 +1493,13 @@ main section.pilares {
 
 .novedades-track {
     display: grid;
-    grid-template-columns: 0.75fr 1.35fr 0.75fr;
-    grid-template-rows: 245px;
+    grid-template-columns: 0.85fr 1.5fr 0.85fr;
+    grid-template-rows: 280px;
     align-items: center;
-    gap: 5.5%;
+    gap: 4%;
 
-    width: 110%;
-    margin-left: -5%;
+    width: 120%;
+    margin-left: -10%;
 
     transform-style: preserve-3d;
 }
@@ -1436,7 +1508,7 @@ main section.pilares {
 
 .novedad-card {
     width: 100%;
-    height: 230px;
+    height: 260px;
     overflow: hidden;
     background-color: #E5E5E5;
 
@@ -1467,13 +1539,13 @@ main section.pilares {
 /* DESTACADA */
 
 .novedad-destacada {
-    height: 245px;
+    height: 280px;
 }
 
 /* LATERALES */
 
 .novedad-lateral {
-    height: 210px;
+    height: 240px;
 }
 
 /* FLECHAS */
@@ -1554,20 +1626,20 @@ main section.pilares {
 @media (max-width: 768px) {
 
     .novedad-card {
-        height: 160px;
+        height: 180px;
     }
 
     .novedad-destacada {
-        height: 190px;
+        height: 200px;
     }
 
     .novedad-lateral {
-        height: 170px;
+        height: 165px;
     }
 
     .novedades-track {
         gap: 4%;
-        grid-template-rows: 190px;
+        grid-template-rows: 200px;
     }
 }
 
@@ -1577,27 +1649,23 @@ main section.pilares {
 
 @media (max-width: 480px) {
 
-    .novedades-heading h2 {
-        font-size: 38px;
-    }
-
     .novedades-track {
         width: 150%;
         margin-left: -25%;
         gap: 5%;
-        grid-template-rows: 160px;
+        grid-template-rows: 170px;
     }
 
     .novedad-card {
-        height: 130px;
+        height: 140px;
     }
 
     .novedad-destacada {
-        height: 160px;
+        height: 170px;
     }
 
     .novedad-lateral {
-        height: 130px;
+        height: 140px;
     }
 
     .novedades-indicadores {
