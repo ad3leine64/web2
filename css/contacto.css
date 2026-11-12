@@ -1,0 +1,560 @@
+
+/* ==================================================
+   INFANCIA SANA
+   PÁGINA CONTACTO
+================================================== */
+
+
+/* ==================================================
+   01. HEADER
+================================================== */
+
+.header-contacto .header-content {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header-contacto .header-content h1 {
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 950;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.header-contacto .header-content p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.nav-links a.activo {
+    color: #285E85;
+}
+
+
+/* ==================================================
+   02. CONTENIDO PRINCIPAL
+================================================== */
+
+.contacto-main {
+    width: 100%;
+    padding: 55px 6.5% 0;
+    background-color: #1C526E;
+    color: #F9F9F4;
+}
+
+.contacto-main > section {
+    padding: 0;
+    margin: 0 auto;
+    min-height: unset;
+}
+
+.contacto-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   03. DISTRIBUCIÓN PRINCIPAL
+================================================== */
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* ==================================================
+   04. FORMULARIO
+================================================== */
+
+.contacto-formulario {
+    padding: 35px 40px;
+    background-color: #F9F9F4;
+    color: #285E85;
+    border-radius: 24px;
+}
+
+.contacto-formulario h2 {
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #285E85;
+}
+
+.contacto-intro {
+    margin: 0 0 25px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #52616B;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.contacto-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contacto-campo label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #285E85;
+    letter-spacing: 0.3px;
+}
+
+.contacto-campo label span {
+    color: #8BAF7A;
+}
+
+.contacto-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 43px;
+    padding: 0 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCD5D9;
+    border-radius: 7px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-input img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.contacto-input input,
+.contacto-input select {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #285E85;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.contacto-input input::placeholder {
+    color: #AAB5BB;
+    font-size: 11px;
+}
+
+.contacto-input select {
+    cursor: pointer;
+}
+
+.contacto-input:focus-within {
+    border-color: #285E85;
+    box-shadow: 0 0 0 3px rgba(40, 94, 133, 0.12);
+}
+
+.contacto-campo textarea {
+    width: 100%;
+    min-height: 115px;
+    padding: 13px;
+    resize: vertical;
+    border: 1px solid #CCD5D9;
+    border-radius: 7px;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #285E85;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-campo textarea::placeholder {
+    color: #AAB5BB;
+    font-size: 11px;
+}
+
+.contacto-campo textarea:focus {
+    border-color: #285E85;
+    box-shadow: 0 0 0 3px rgba(40, 94, 133, 0.12);
+}
+
+.contacto-button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 3px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    background-color: #E8EFAF;
+    color: #285E85;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.contacto-button span {
+    font-size: 17px;
+}
+
+.contacto-button:hover {
+    background-color: #DCE99A;
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   05. INFORMACIÓN DE CONTACTO
+================================================== */
+
+.contacto-informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    padding: 35px 32px;
+    background-color: #C5E8F8;
+    color: #173D59;
+    border-radius: 24px;
+}
+
+.contacto-informacion h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #173D59;
+}
+
+.contacto-informacion p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   06. REDES SOCIALES
+================================================== */
+
+.contacto-redes p {
+    max-width: 300px;
+}
+
+.contacto-social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.contacto-social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+}
+
+.contacto-social-links a:hover {
+    transform: translateY(-4px);
+}
+
+.contacto-social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(25%) saturate(1710%) hue-rotate(165deg) brightness(91%) contrast(91%);
+}
+
+
+/* ==================================================
+   07. DIVISOR
+================================================== */
+
+.contacto-divider {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(23, 61, 89, 0.45);
+}
+
+
+/* ==================================================
+   08. DATOS DE CONTACTO
+================================================== */
+
+.contacto-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.contacto-datos h2 {
+    margin-bottom: 2px;
+}
+
+.contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contacto-dato img {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(25%) saturate(1710%) hue-rotate(165deg) brightness(91%) contrast(91%);
+}
+
+.contacto-dato p,
+.contacto-dato a {
+    color: #173D59;
+    font-size: 14px;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contacto-dato a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   09. MAPA
+================================================== */
+
+.contacto-main > .contacto-mapa {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: none;
+    margin: 75px 0 0;
+    padding: 0;
+}
+
+/* TÍTULO */
+
+.contacto-mapa-heading {
+    width: 87%;
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    padding: 0;
+}
+
+.contacto-mapa-heading h2 {
+    margin: 0 0 8px;
+    color: #F9F9F4;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.contacto-mapa-heading p {
+    margin: 0;
+    color: #DCEAF0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* CONTENEDOR DEL MAPA */
+
+.contacto-mapa-contenedor {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: #C5E8F8;
+}
+
+.contacto-mapa-contenedor iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ==================================================
+   10. RESPONSIVE - TABLETS
+================================================== */
+
+@media (max-width: 900px) {
+
+    .contacto-main {
+        padding: 45px 5% 0;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+    }
+
+    .contacto-formulario {
+        padding: 28px 25px;
+    }
+
+    .contacto-informacion {
+        padding: 28px 22px;
+        gap: 22px;
+    }
+
+    .contacto-informacion h2 {
+        font-size: 24px;
+    }
+
+    .contacto-social-links {
+        gap: 15px;
+    }
+
+    .contacto-main > .contacto-mapa {
+        margin-top: 65px;
+    }
+
+}
+
+
+/* ==================================================
+   11. RESPONSIVE - MÓVILES
+================================================== */
+
+@media (max-width: 650px) {
+
+    .header-contacto .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-contacto .header-content p {
+        font-size: 13px;
+    }
+
+    .contacto-main {
+        padding: 35px 5% 0;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacto-formulario {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .contacto-formulario h2 {
+        font-size: 26px;
+    }
+
+    .contacto-informacion {
+        padding: 28px 24px;
+        border-radius: 18px;
+        gap: 22px;
+    }
+
+    .contacto-informacion h2 {
+        font-size: 25px;
+    }
+
+    .contacto-social-links {
+        gap: 20px;
+    }
+
+    .contacto-main > .contacto-mapa {
+        margin-top: 55px;
+    }
+
+    .contacto-mapa-heading {
+        width: 90%;
+    }
+
+    .contacto-mapa-heading h2 {
+        font-size: 25px;
+    }
+
+    .contacto-mapa-contenedor {
+        height: 320px;
+    }
+
+}
+
+
+/* ==================================================
+   12. RESPONSIVE - PANTALLAS PEQUEÑAS
+================================================== */
+
+@media (max-width: 480px) {
+
+    .contacto-mapa-heading {
+        width: 90%;
+    }
+
+    .contacto-mapa-contenedor {
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .contacto-formulario {
+        padding: 24px 17px;
+    }
+
+    .contacto-informacion {
+        padding: 24px 18px;
+    }
+
+    .contacto-social-links {
+        gap: 17px;
+    }
+
+    .contacto-mapa-contenedor {
+        height: 270px;
+    }
+
+}
+
+
+/* ==================================================
+   13. ICONOS
+================================================== */
+
+.icono-contacto {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    color: #173D59;
+}
+
+.icono-formulario {
+    width: 19px;
+    flex-shrink: 0;
+    color: #285E85;
+    font-size: 17px;
+    opacity: 0.7;
+}

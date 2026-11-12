@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Infancia Sana</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         ENCABEZADO
+    ================================================== -->
+
+    <header class="header header-contacto">
+
+        <div class="header-background">
+
+            <img
+                src="assets/images/contacto_header.jpg"
+                alt="Imagen de portada de Contacto"
+                class="header-image"
+            >
+
+            <div class="header-gradient"></div>
+            <div class="header-texture"></div>
+
+        </div>
+
+        <div class="header-contact">
+
+            <a href="mailto:grupo@infanciasana.com.ar">
+                <img src="assets/images/icon_mail.svg" alt="Correo electrónico">
+                <span>grupo@infanciasana.com.ar</span>
+            </a>
+
+            <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_wsp.svg" alt="WhatsApp">
+                <span>+54 9 11 4167-0806</span>
+            </a>
+
+        </div>
+
+        <div class="header-social">
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_twitter.svg" alt="Twitter">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/logo-infancia-sana.svg?v=3"
+                    alt="Infancia Sana"
+                    class="logo-normal"
+                >
+
+                <img
+                    src="assets/images/logo-infancia-sana-color.svg"
+                    alt=""
+                    class="logo-color"
+                >
+
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="recursos.html">RECURSOS</a></li>
+                <li><a href="programas.html">PROGRAMAS</a></li>
+                <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                <li><a href="novedades.html">NOVEDADES</a></li>
+                <li><a href="contacto.html" class="activo">CONTACTO</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="header-content">
+
+            <h1>CONTACTO</h1>
+
+            <p>
+                ¿Tenés alguna consulta, sugerencia o querés conocer más
+                sobre nuestras iniciativas? Escribinos, estamos para ayudarte.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main class="contacto-main">
+
+        <!-- FORMULARIO E INFORMACIÓN -->
+
+        <section class="contacto-contenido">
+
+            <div class="contacto-grid">
+
+                <!-- FORMULARIO -->
+
+                <div class="contacto-formulario">
+
+                    <h2>Escribinos</h2>
+
+                    <p class="contacto-intro">
+                        Completá el formulario y contanos cómo podemos ayudarte.
+                    </p>
+
+                    <form class="formulario-contacto">
+
+                        <div class="contacto-campo">
+
+                            <label for="nombre">
+                                NOMBRE Y APELLIDO <span>*</span>
+                            </label>
+
+                            <div class="contacto-input">
+                                <img src="assets/images/icon_user.svg" alt="">
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="TU NOMBRE Y APELLIDO"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="contacto-campo">
+
+                            <label for="email">
+                                EMAIL <span>*</span>
+                            </label>
+
+                            <div class="contacto-input">
+                                <img src="assets/images/icon_mail_2.svg" alt="">
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="TU EMAIL"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="contacto-campo">
+
+                            <label for="telefono">
+                                TELÉFONO
+                            </label>
+
+                            <div class="contacto-input">
+                                <img src="assets/images/icon_phone.svg" alt="">
+
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="TU TELÉFONO"
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="contacto-campo">
+
+                            <label for="motivo">
+                                MOTIVO DE CONSULTA <span>*</span>
+                            </label>
+
+                            <div class="contacto-input">
+
+                                <i class="fa-solid fa-comment-dots icono-formulario" aria-hidden="true"></i>
+
+                                <select id="motivo" name="motivo" required>
+
+                                    <option value="" disabled selected>
+                                        SELECCIONÁ UNA OPCIÓN
+                                    </option>
+
+                                    <option value="informacion">
+                                        Información general
+                                    </option>
+
+                                    <option value="actividades">
+                                        Actividades e iniciativas
+                                    </option>
+
+                                    <option value="capacitaciones">
+                                        Capacitaciones
+                                    </option>
+
+                                    <option value="colaboracion">
+                                        Colaboraciones
+                                    </option>
+
+                                    <option value="otro">
+                                        Otro motivo
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contacto-campo">
+
+                            <label for="mensaje">
+                                MENSAJE <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="CONTANOS MÁS SOBRE LO QUE NECESITÁS..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <button type="submit" class="contacto-button">
+                            <span>➤</span>
+                            ENVIAR MENSAJE
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- INFORMACIÓN DE CONTACTO -->
+
+                <aside class="contacto-informacion">
+
+                    <div class="contacto-redes">
+
+                        <h2>Seguinos</h2>
+
+                        <p>
+                            Enterate de nuestras novedades y actividades
+                            a través de nuestras redes sociales.
+                        </p>
+
+                        <div class="contacto-social-links">
+
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <img src="assets/images/icon_facebook.svg" alt="">
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/infanciasana.ar/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <img src="assets/images/icon_instagram.svg" alt="">
+                            </a>
+
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <img src="assets/images/icon_twitter.svg" alt="">
+                            </a>
+
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <img src="assets/images/icon_youtube.svg" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contacto-divider"></div>
+
+
+                    <div class="contacto-datos">
+
+                        <h2>Encontranos</h2>
+
+                        <div class="contacto-dato">
+
+                            <svg
+                                class="icono-contacto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+
+                            <p>
+                                Calle 93 Tucumán 130,
+                                General San Martín
+                            </p>
+
+                        </div>
+
+                        <div class="contacto-dato">
+
+                            <img src="assets/images/icon_mail.svg" alt="">
+
+                            <a href="mailto:grupo@infanciasana.com.ar">
+                                grupo@infanciasana.com.ar
+                            </a>
+
+                        </div>
+
+                        <div class="contacto-dato">
+
+                            <img src="assets/images/icon_wsp.svg" alt="">
+
+                            <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                                +54 9 11 4167-0806
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MAPA
+        ================================================== -->
+
+        <section class="contacto-mapa">
+
+            <div class="contacto-mapa-heading">
+
+                <h2>¿Dónde encontrarnos?</h2>
+
+                <p>
+                    Conocé nuestra ubicación y encontrá cómo llegar.
+                </p>
+
+            </div>
+
+            <div class="contacto-mapa-contenedor">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17993787.65151068!2d-68.56153539552525!3d-34.57541255589327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb770658350a7%3A0xa6529b0706ecfaa0!2sESCUELA%20DE%20ARTES%20VISUALES%20%22ANTONIO%20BERNI%22%20DE%20GENERAL%20SAN%20MART%C3%8DN!5e1!3m2!1ses-419!2sar!4v1793675253520!5m2!1ses-419!2sar"
+                    title="Ubicación de la Escuela de Artes Visuales Antonio Berni"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img
+                        src="assets/images/logo-infancia-sana.svg?v=3"
+                        alt="Infancia Sana"
+                    >
+                </a>
+
+                <div class="footer-social">
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_facebook.svg" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_instagram.svg" alt="Instagram">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_twitter.svg" alt="Twitter">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_youtube.svg" alt="YouTube">
+                    </a>
+
+                </div>
+
+                <div class="footer-contact">
+
+                    <a href="mailto:grupo@infanciasana.com.ar">
+                        <img src="assets/images/icon_mail.svg" alt="">
+                        grupo@infanciasana.com.ar
+                    </a>
+
+                    <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_wsp.svg" alt="">
+                        +54 9 11 4167-0806
+                    </a>
+
+                </div>
+
+            </div>
+
+            <nav class="footer-nav">
+
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="recursos.html">RECURSOS</a>
+                <a href="programas.html">PROGRAMAS</a>
+                <a href="capacitaciones.html">CAPACITACIONES</a>
+                <a href="novedades.html">NOVEDADES</a>
+                <a href="contacto.html">CONTACTO</a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+</body>
+</html>

@@ -1787,3 +1787,129 @@ main section.pilares {
         transform: translateY(0);
     }
 }
+
+/* ==================================================
+   ANIMACIÓN DEL LOGO - VOLVER A HOME
+================================================== */
+
+.logo {
+    position: absolute;
+    top: 10%;
+    left: 4.5%;
+
+    display: block;
+    width: clamp(85px, 10.5vw, 145px);
+
+    pointer-events: auto;
+    transition: transform 0.35s ease;
+}
+
+/* Ambas versiones del logo */
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.35s ease;
+}
+
+/* Logo a color superpuesto */
+
+.logo-color {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+/* Efecto al pasar el cursor */
+
+.logo:hover {
+    transform: scale(1.09);
+}
+
+.logo:hover .logo-normal {
+    opacity: 0;
+}
+
+.logo:hover .logo-color {
+    opacity: 1;
+}
+
+/* Accesibilidad: navegación con teclado */
+
+.logo:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+/* Evitar animaciones si el usuario las desactiva */
+
+@media (prefers-reduced-motion: reduce) {
+    .logo,
+    .logo img {
+        transition: none;
+    }
+}
+
+/* ==================================================
+   EFECTOS EXTRA DEL LOGO
+================================================== */
+
+.logo {
+    position: absolute;
+    isolation: isolate;
+
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Resplandor */
+.logo::before {
+    content: "";
+    position: absolute;
+
+    width: 180%;
+    height: 180%;
+    top: -40%;
+    left: -40%;
+
+    z-index: -1;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(130, 205, 235, 0.65) 25%,
+        rgba(40, 140, 190, 0.35) 50%,
+        transparent 75%
+    );
+
+    filter: blur(30px);
+
+    opacity: 0;
+    transform: scale(0.7);
+
+    transition:
+        opacity 0.55s ease,
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+    pointer-events: none;
+}
+
+/* Activación */
+.logo:hover {
+    transform: scale(1.06);
+}
+
+.logo:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .logo,
+    .logo::before {
+        transition: none;
+    }
+}

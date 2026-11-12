@@ -1,0 +1,301 @@
+
+/* ==================================================
+   INFANCIA SANA
+   PÁGINA NOSOTROS
+================================================== */
+
+
+/* ==================================================
+   01. TÍTULO CENTRAL DEL HEADER
+================================================== */
+
+.header-content {
+    top: 50%;
+    left: 0;
+    width: 100%;
+
+    transform: translateY(-50%);
+
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 950;
+    line-height: 1.1;
+}
+
+
+/* ==================================================
+   02. NAVEGACIÓN ACTIVA
+================================================== */
+
+.nav-links a.activo {
+    color: #285E85;
+}
+
+
+/* ==================================================
+   03. RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        top: 55%;
+        left: 0;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .header-content h1 {
+        font-size: clamp(28px, 6vw, 38px);
+    }
+
+}
+
+/* ==================================================
+   HEADER - PÁGINA NOSOTROS
+================================================== */
+
+/* FOTOGRAFÍA */
+
+.header-background > img {
+    object-position: center;
+}
+
+/* DEGRADADO PNG PROPIO */
+
+.header-gradient {
+    background-image: url('../assets/images/nosotros_header_gradient.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+
+/* ==================================================
+   NOSOTROS - CONTENIDO PRINCIPAL
+================================================== */
+
+.nosotros-main {
+    width: 100%;
+    padding: 24px 6.5% 75px;
+    background-color: var(--blanco);
+    color: var(--azul-principal);
+}
+
+/* ==================================================
+   CONOCER PARA PREVENIR
+================================================== */
+
+.nosotros-intro {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.nosotros-intro h1,
+.nosotros-mvv h2,
+.nosotros-objetivos h2 {
+    color: var(--azul-principal);
+    font-size: clamp(26px, 3vw, 34px);
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+.intro-text {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.intro-text p {
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 0 0 13px;
+    color: var(--azul-principal);
+}
+
+/* ==================================================
+   MISIÓN, VISIÓN Y VALORES
+================================================== */
+
+.nosotros-mvv {
+    max-width: 1050px;
+    margin: 48px auto 0;
+}
+
+.nosotros-mvv h2 {
+    margin-bottom: 26px;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+}
+
+.mvv-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mvv-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: var(--azul-principal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+}
+
+.mvv-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--blanco);
+}
+
+.mvv-item h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: var(--azul-principal);
+}
+
+.mvv-item p {
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0;
+    color: var(--azul-principal);
+}
+
+/* ==================================================
+   OBJETIVOS
+================================================== */
+
+.nosotros-objetivos {
+    max-width: 1120px;
+    margin: 38px auto 0;
+}
+
+.nosotros-objetivos h2 {
+    margin-bottom: 25px;
+}
+
+.objetivos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px;
+}
+
+.objetivo-item h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: var(--azul-principal);
+}
+
+.objetivo-item p {
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 0;
+    color: var(--azul-principal);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .nosotros-main {
+        padding: 30px 7% 55px;
+    }
+
+    .nosotros-mvv {
+        margin-top: 40px;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .mvv-item p {
+        max-width: 280px;
+    }
+
+    .nosotros-objetivos {
+        margin-top: 42px;
+    }
+
+    .objetivos-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+/* ==================================================
+   AJUSTE DE ESPACIADO - NOSOTROS
+================================================== */
+
+.nosotros-main > section {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: unset !important;
+    height: auto;
+}
+
+/* Introducción */
+.nosotros-main > .nosotros-intro {
+    margin: 0 auto !important;
+}
+
+/* Misión, Visión y Valores */
+.nosotros-main > .nosotros-mvv {
+    margin: 20px auto 0 !important;
+}
+
+.nosotros-mvv h2 {
+    margin-bottom: 22px;
+}
+
+/* Objetivos */
+.nosotros-main > .nosotros-objetivos {
+    margin: 30px auto 0 !important;
+}
+
+.nosotros-objetivos h2 {
+    margin-bottom: 20px;
+}
+
+/* Unificar tipografía de los títulos */
+.nosotros-intro h1,
+.nosotros-mvv h2,
+.nosotros-objetivos h2 {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+/* ==================================================
+   ANIMACIONES DE NOSOTROS
+================================================== */
+
+.nosotros-main .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.nosotros-main .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
