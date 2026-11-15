@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (noticias.length < 2) return;
 
-    let indiceActual = 1;
+    // La primera novedad (la inicial) queda en el centro.
+    let indiceActual = 0;
     let bloqueado = false;
     let inicioX = 0;
     let animacionInicialActiva = true;

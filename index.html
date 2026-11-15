@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infancia Sana</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/novedad-card.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 
@@ -287,57 +288,10 @@
             &#10094;
         </button>
 
-        <!-- CARRUSEL -->
-        <div class="novedades-track">
-
-            <!-- NOTICIA 1 -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_1.jpg"
-                         alt="Novedad de Infancia Sana">
-                </a>
-            </article>
-
-            <!-- NOTICIA DESTACADA -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_2.jpg"
-                         alt="Novedad destacada de Infancia Sana">
-                </a>
-            </article>
-
-            <!-- NOTICIA 3 -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_3.jpg"
-                         alt="Novedad de Infancia Sana">
-                </a>
-            </article>
-
-            <!-- NOTICIA 4 -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_4.jpg"
-                         alt="Novedad de Infancia Sana">
-                </a>
-            </article>
-
-            <!-- NOTICIA 5 -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_5.jpg"
-                         alt="Novedad destacada de Infancia Sana">
-                </a>
-            </article>
-
-            <!-- NOTICIA 6 -->
-            <article class="novedad-card novedad-lateral">
-                <a href="#">
-                    <img src="assets/images/novedad_6.jpg"
-                         alt="Novedad de Infancia Sana">
-                </a>
-            </article>
-        </div>
+        <!-- CARRUSEL
+             Las tarjetas se generan desde JS/novedades-data.js,
+             la misma fuente que usa la página Novedades. -->
+        <div class="novedades-track"></div>
 
         <!-- FLECHA SIGUIENTE -->
         <button class="novedades-flecha siguiente"
@@ -487,6 +441,7 @@
 
     </footer>
 
+    <script src="JS/novedades-data.js"></script>
     <script src="JS/script.js"></script>
 </body>
 </html>

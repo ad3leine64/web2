@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recursos | Infancia Sana</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         01. ENCABEZADO
+    ================================================== -->
+
+    <header class="header header-recursos">
+
+        <div class="header-background">
+
+            <!-- IMAGEN: recursos_header.jpg -->
+            <div
+                class="header-image header-image-placeholder"
+                data-imagen="recursos_header.jpg">
+            </div>
+
+            <!-- GRADIENTE PROPIO -->
+            <div class="header-gradient header-gradient-recursos"></div>
+
+            <!-- TEXTURA COMPARTIDA -->
+            <div class="header-texture"></div>
+
+        </div>
+
+
+        <!-- CONTACTO -->
+
+        <div class="header-contact">
+
+            <a href="mailto:grupo@infanciasana.com.ar">
+                <img src="assets/images/icon_mail.svg" alt="Correo electrónico">
+                <span>grupo@infanciasana.com.ar</span>
+            </a>
+
+            <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_wsp.svg" alt="WhatsApp">
+                <span>+54 9 11 4167-0806</span>
+            </a>
+
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+
+        <div class="header-social">
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_twitter.svg" alt="Twitter">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/logo-infancia-sana.svg?v=3"
+                    alt="Infancia Sana"
+                    class="logo-normal"
+                >
+
+                <img
+                    src="assets/images/logo-infancia-sana-color.svg"
+                    alt=""
+                    class="logo-color"
+                >
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="recursos.html" class="activo">RECURSOS</a></li>
+                <li><a href="programas.html">PROGRAMAS</a></li>
+                <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                <li><a href="novedades.html">NOVEDADES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- TÍTULO -->
+
+        <div class="header-content">
+            <h1>RECURSOS</h1>
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         02. CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main class="recursos-main">
+
+        <section class="recursos-contenido">
+
+            <!-- PRESENTACIÓN -->
+
+            <div class="recursos-presentacion">
+
+                <h2>Materiales para informar, concientizar y proteger</h2>
+
+                <p>
+                    Descargá guías, infografías y materiales de apoyo para
+                    docentes, familias, niños, niñas y adolescentes, con
+                    herramientas concretas para el cuidado en el entorno
+                    digital.
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="recursos-filtros">
+
+                <div class="filtro-grupo">
+
+                    <label for="filtro-tema" class="visually-hidden">
+                        Filtrar por tema
+                    </label>
+
+                    <div class="filtro-contenedor">
+
+                        <span class="filtro-icono" aria-hidden="true">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        <select id="filtro-tema" name="tema">
+                            <option value="todos">Filtrar por tema</option>
+                            <option value="educacion-digital">Educación digital</option>
+                            <option value="violencia-digital">Violencia digital</option>
+                            <option value="esi">Educación sexual integral</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="filtro-grupo">
+
+                    <label for="filtro-publico" class="visually-hidden">
+                        Filtrar por público
+                    </label>
+
+                    <div class="filtro-contenedor">
+
+                        <span class="filtro-icono" aria-hidden="true">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+
+                        <select id="filtro-publico" name="publico">
+                            <option value="todos">Filtrar por público</option>
+                            <option value="docentes">Docentes</option>
+                            <option value="familias">Familias</option>
+                            <option value="ninos">Niños, niñas y adolescentes</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECURSOS (se generan desde JS/recursos-data.js) -->
+
+            <div class="recursos-listado"></div>
+
+            <p class="recursos-vacio" hidden>
+                No encontramos recursos con esos filtros.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         03. FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- LOGO Y CONTACTO -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img
+                        src="assets/images/logo-infancia-sana.svg?v=3"
+                        alt="Infancia Sana"
+                    >
+
+                </a>
+
+
+                <div class="footer-social">
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_facebook.svg" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_instagram.svg" alt="Instagram">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_twitter.svg" alt="Twitter">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_youtube.svg" alt="YouTube">
+                    </a>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <a href="mailto:grupo@infanciasana.com.ar">
+                        <img src="assets/images/icon_mail.svg" alt="">
+                        grupo@infanciasana.com.ar
+                    </a>
+
+                    <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_wsp.svg" alt="">
+                        +54 9 11 4167-0806
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="footer-nav">
+
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="recursos.html">RECURSOS</a>
+                <a href="programas.html">PROGRAMAS</a>
+                <a href="capacitaciones.html">CAPACITACIONES</a>
+                <a href="novedades.html">NOVEDADES</a>
+                <a href="contacto.html">CONTACTO</a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         04. JAVASCRIPT
+    ================================================== -->
+
+    <script src="JS/recursos-data.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/recursos.js"></script>
+
+</body>
+
+</html>

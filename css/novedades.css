@@ -1,0 +1,300 @@
+
+/* ==================================================
+   INFANCIA SANA
+   PÁGINA NOVEDADES
+   (la tarjeta está en css/novedad-card.css)
+================================================== */
+
+
+/* ==================================================
+   01. HEADER
+================================================== */
+
+.header-novedades {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-novedades .header-image-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: #C9BC8E;
+
+    background-image: url("../assets/images/novedades_header.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Degradado propio: verde oliva */
+
+.header-novedades .header-gradient-novedades {
+    background-image: url("../assets/images/novedades_header_gradient.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.header-novedades .header-texture {
+    background-image: url("../assets/images/home_header_texture.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-novedades .header-content {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.header-novedades .header-content h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 950;
+    line-height: 1.1;
+}
+
+.nav-links a.activo {
+    color: #FCF1B8;
+}
+
+
+/* ==================================================
+   02. CONTENIDO PRINCIPAL
+================================================== */
+
+.novedades-main {
+    width: 100%;
+    padding: 60px 6.5% 70px;
+    background-color: #165171;
+    color: #F9F9F4;
+    overflow: hidden;
+}
+
+.novedades-main > section {
+    width: 100%;
+    max-width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    min-height: unset;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   03. PRESENTACIÓN
+================================================== */
+
+.novedades-presentacion {
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.novedades-presentacion h2 {
+    margin: 0;
+    font-size: clamp(21px, 2.9vw, 31px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.novedades-presentacion h2 .linea-amarilla {
+    display: block;
+    color: #FCF1B8;
+}
+
+.novedades-presentacion h2 .linea-celeste {
+    display: block;
+    color: #CFE6F4;
+}
+
+
+/* ==================================================
+   04. GRILLA DE NOVEDADES
+================================================== */
+
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 30px 28px;
+
+    /* Mantiene el alto entre páginas con distinta cantidad de tarjetas */
+    min-height: var(--alto-grilla, 0);
+}
+
+.novedades-grid .nv-card {
+    min-height: 230px;
+}
+
+.novedades-grid .nv-texto {
+    font-size: 12px;
+}
+
+.novedades-grid .nv-titulo {
+    font-size: clamp(15px, 1.6vw, 18px);
+}
+
+
+/* ==================================================
+   05. APARICIÓN DE LAS TARJETAS
+   Mismo sistema que Programas y Capacitaciones:
+   entrada escalonada y, al terminar, hover rápido.
+================================================== */
+
+.novedades-presentacion {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.novedades-presentacion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.novedades-grid .nv-card {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    transition-delay: var(--retraso, 0s);
+}
+
+.novedades-grid .nv-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.novedades-grid .nv-card.revelada {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    transition-delay: 0s;
+}
+
+@media (hover: hover) {
+
+    .novedades-grid .nv-card.visible:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+}
+
+/* Salida al cambiar de página */
+
+.novedades-grid.saliendo .nv-card {
+    opacity: 0;
+    transform: translateY(-14px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    transition-delay: 0s;
+}
+
+
+/* ==================================================
+   06. PAGINACIÓN
+================================================== */
+
+.novedades-paginas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 44px;
+}
+
+.novedades-paginas[hidden] {
+    display: none;
+}
+
+.nv-punto {
+    display: block;
+    width: 29px;
+    height: 11px;
+    padding: 0;
+
+    border: none;
+    border-radius: 20px;
+    background-color: #E2E2E2;
+
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        width 0.25s ease;
+}
+
+.nv-punto:hover {
+    background-color: #FFFFFF;
+}
+
+.nv-punto.activo {
+    width: 38px;
+    background-color: #C2D794;
+}
+
+.nv-punto:focus-visible {
+    outline: 2px solid #FCF1B8;
+    outline-offset: 3px;
+}
+
+
+/* ==================================================
+   07. RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+
+    .novedades-grid {
+        gap: 22px 18px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .novedades-main {
+        padding: 40px 5% 50px;
+    }
+
+    .novedades-presentacion {
+        margin-bottom: 32px;
+    }
+
+    .novedades-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .novedades-grid .nv-card {
+        min-height: 200px;
+    }
+
+    .novedades-paginas {
+        margin-top: 32px;
+        gap: 8px;
+    }
+
+    .nv-punto {
+        width: 22px;
+        height: 9px;
+    }
+
+    .nv-punto.activo {
+        width: 30px;
+    }
+
+}

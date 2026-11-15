@@ -1,0 +1,453 @@
+
+/* ==================================================
+   INFANCIA SANA
+   PÁGINA RECURSOS
+================================================== */
+
+
+/* ==================================================
+   01. HEADER
+================================================== */
+
+.header-recursos {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-recursos .header-image-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: #D9B48F;
+
+    background-image: url("../assets/images/recursos_header.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Degradado propio: terracota */
+
+.header-recursos .header-gradient-recursos {
+    background-image: url("../assets/images/recursos_header_gradient.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.header-recursos .header-texture {
+    background-image: url("../assets/images/home_header_texture.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-recursos .header-content {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.header-recursos .header-content h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 950;
+    line-height: 1.1;
+}
+
+.nav-links a.activo {
+    color: #FCF1B8;
+}
+
+
+/* ==================================================
+   02. CONTENIDO PRINCIPAL
+================================================== */
+
+.recursos-main {
+    width: 100%;
+    padding: 55px 6.5% 70px;
+    background-color: #165171;
+    color: #F9F9F4;
+    overflow: hidden;
+}
+
+.recursos-main > section {
+    width: 100%;
+    max-width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+    min-height: unset;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   03. PRESENTACIÓN
+================================================== */
+
+.recursos-presentacion {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.recursos-presentacion h2 {
+    margin: 0 0 10px;
+    color: #FCF1B8;
+    font-size: clamp(21px, 2.9vw, 31px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.recursos-presentacion p {
+    margin: 0 auto;
+    color: rgba(249, 249, 244, 0.95);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   04. FILTROS
+================================================== */
+
+.recursos-filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto 34px;
+}
+
+.filtro-grupo {
+    width: 100%;
+    max-width: 270px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.filtro-contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 42px;
+    background-color: #F9F9F4;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.filtro-icono {
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #285E85;
+    font-size: 15px;
+}
+
+.filtro-contenedor select {
+    width: 100%;
+    height: 42px;
+    padding: 0 28px 0 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #285E85;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filtro-contenedor select:focus-visible {
+    outline: 2px solid #285E85;
+    outline-offset: -3px;
+}
+
+
+/* ==================================================
+   05. LISTADO DE RECURSOS
+================================================== */
+
+.recursos-listado {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.rc-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #F9F9F4;
+    color: #285E85;
+}
+
+.rc-card[hidden] {
+    display: none !important;
+}
+
+.recursos-vacio {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(249, 249, 244, 0.9);
+}
+
+.recursos-vacio[hidden] {
+    display: none;
+}
+
+
+/* PORTADA (color según el tema) */
+
+.rc-portada {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #E5E5E5;
+}
+
+.rc-tema-educacion-digital .rc-portada { background-color: #FFF0B5; }
+.rc-tema-violencia-digital .rc-portada { background-color: #CDEEDB; }
+.rc-tema-esi .rc-portada               { background-color: #C5E8F8; }
+
+.rc-portada svg {
+    width: 62px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(16, 43, 67, 0.18));
+    transition: transform 0.35s ease;
+}
+
+.rc-card:hover .rc-portada svg {
+    transform: translateY(-3px) rotate(-3deg);
+}
+
+.rc-extension {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #285E85;
+    color: #FFFFFF;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* TEXTO */
+
+.rc-cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px 16px 14px;
+}
+
+.rc-tag {
+    align-self: flex-start;
+    padding: 2px 9px;
+
+    border-radius: 20px;
+    background-color: #C2D794;
+    color: #285E85;
+
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.rc-titulo {
+    margin: 10px 0 6px;
+    color: #12486B;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.rc-texto {
+    margin: 0 0 14px;
+    font-size: 12.5px;
+    line-height: 1.4;
+}
+
+.rc-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(40, 94, 133, 0.2);
+}
+
+.rc-meta {
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.25;
+    opacity: 0.85;
+}
+
+
+/* BOTÓN */
+
+.rc-boton {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 6px;
+    padding: 8px 13px;
+
+    border-radius: 20px;
+    background-color: #285E85;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.rc-boton svg {
+    width: 15px;
+    height: 15px;
+}
+
+a.rc-boton:hover {
+    background-color: #102B43;
+    transform: translateY(-2px);
+}
+
+a.rc-boton:focus-visible {
+    outline: 2px solid #12486B;
+    outline-offset: 3px;
+}
+
+.rc-boton-pendiente {
+    background-color: #E2E2E2;
+    color: #5C7488;
+    cursor: default;
+}
+
+
+/* ==================================================
+   06. APARICIÓN (igual que Programas y Capacitaciones)
+================================================== */
+
+.recursos-presentacion,
+.recursos-filtros {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.recursos-presentacion.visible,
+.recursos-filtros.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recursos-main .rc-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    transition-delay: var(--retraso, 0s);
+}
+
+.recursos-main .rc-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ya revelada: el hover responde al instante */
+
+.recursos-main .rc-card.revelada {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    transition-delay: 0s;
+}
+
+@media (hover: hover) {
+
+    .recursos-main .rc-card.visible:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+}
+
+
+/* ==================================================
+   07. RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+
+    .recursos-listado {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .recursos-main {
+        padding: 40px 5% 50px;
+    }
+
+    .recursos-listado {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .recursos-filtros {
+        flex-direction: column;
+        margin-bottom: 26px;
+    }
+
+    .filtro-grupo {
+        max-width: none;
+    }
+
+    .rc-portada {
+        height: 120px;
+    }
+
+}

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capacitaciones | Infancia Sana</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/capacitaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         01. ENCABEZADO
+    ================================================== -->
+
+    <header class="header header-capacitaciones">
+
+        <div class="header-background">
+
+            <!-- IMAGEN: capacitaciones_header.jpg -->
+            <div
+                class="header-image header-image-placeholder"
+                data-imagen="capacitaciones_header.jpg">
+            </div>
+
+            <!-- GRADIENTE PROPIO -->
+            <div class="header-gradient header-gradient-capacitaciones"></div>
+
+            <!-- TEXTURA COMPARTIDA -->
+            <div class="header-texture"></div>
+
+        </div>
+
+
+        <!-- CONTACTO -->
+
+        <div class="header-contact">
+
+            <a href="mailto:grupo@infanciasana.com.ar">
+                <img src="assets/images/icon_mail.svg" alt="Correo electrónico">
+                <span>grupo@infanciasana.com.ar</span>
+            </a>
+
+            <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_wsp.svg" alt="WhatsApp">
+                <span>+54 9 11 4167-0806</span>
+            </a>
+
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+
+        <div class="header-social">
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_twitter.svg" alt="Twitter">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/logo-infancia-sana.svg?v=3"
+                    alt="Infancia Sana"
+                    class="logo-normal"
+                >
+
+                <img
+                    src="assets/images/logo-infancia-sana-color.svg"
+                    alt=""
+                    class="logo-color"
+                >
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="recursos.html">RECURSOS</a></li>
+                <li><a href="programas.html">PROGRAMAS</a></li>
+                <li><a href="capacitaciones.html" class="activo">CAPACITACIONES</a></li>
+                <li><a href="novedades.html">NOVEDADES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- TÍTULO -->
+
+        <div class="header-content">
+            <h1>CAPACITACIONES</h1>
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         02. CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main class="capacitaciones-main">
+
+
+        <!-- PRESENTACIÓN -->
+
+        <section class="capacitaciones-contenido">
+
+            <div class="capacitaciones-heading">
+
+                <h2>
+                    Informar, concientizar y proteger:
+                    <br>
+                    nuestro compromiso con la infancia
+                </h2>
+
+                <p>
+                    Ofrecemos espacios de formación para docentes, familias,
+                    niños, niñas y adolescentes, donde abordamos distintas
+                    problemáticas y desafíos del entorno digital, como el
+                    ciberbullying, el grooming, la difusión de contenido sin
+                    consentimiento, el uso de la inteligencia artificial,
+                    el pensamiento computacional y el uso responsable
+                    de las pantallas.
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="capacitaciones-filtros">
+
+                <!-- FILTRO POR TEMA -->
+
+                <div class="filtro-grupo">
+
+                    <label for="filtro-tema" class="visually-hidden">
+                        Filtrar por tema
+                    </label>
+
+                    <div class="filtro-contenedor">
+
+                        <span class="filtro-icono" aria-hidden="true">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        <select id="filtro-tema" name="tema">
+
+                            <option value="todos">Filtrar por tema</option>
+                            <option value="educacion-digital">Educación digital</option>
+                            <option value="violencia-digital">Violencia digital</option>
+                            <option value="esi">Educación sexual integral</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTRO POR PÚBLICO -->
+
+                <div class="filtro-grupo">
+
+                    <label for="filtro-publico" class="visually-hidden">
+                        Filtrar por público
+                    </label>
+
+                    <div class="filtro-contenedor">
+
+                        <span class="filtro-icono" aria-hidden="true">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+
+                        <select id="filtro-publico" name="publico">
+
+                            <option value="todos">Filtrar por público</option>
+                            <option value="docentes">Docentes</option>
+                            <option value="familias">Familias</option>
+                            <option value="ninos">Niños, niñas y adolescentes</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TARJETAS DE CAPACITACIONES -->
+
+            <div class="capacitaciones-listado">
+
+
+                <!-- CAPACITACIÓN 01: EDUCACIÓN DIGITAL SEGURA -->
+
+                <article
+                    class="capacitacion-card capacitacion-digital"
+                    data-tema="educacion-digital"
+                    data-publico="docentes familias ninos"
+                >
+
+                    <div class="capacitacion-imagen">
+
+                        <!-- IMAGEN: capacitacion_educacion_digital.jpg -->
+
+                        <div
+                            class="imagen-placeholder"
+                            data-imagen="capacitacion_educacion_digital.jpg">
+                        </div>
+
+                    </div>
+
+
+                    <div class="capacitacion-informacion">
+
+                        <h3>EDUCACIÓN DIGITAL SEGURA</h3>
+
+                        <p>
+                            Brindamos herramientas para acompañar a niños,
+                            niñas y adolescentes en el uso responsable
+                            de internet y las redes sociales, promoviendo
+                            una ciudadanía digital segura y consciente.
+                        </p>
+
+                        <span class="capacitacion-publico">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            Docentes, familias y adolescentes
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="capacitacion-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="detalle-educacion-digital"
+                        aria-label="Ver más sobre Educación Digital Segura"
+                    >
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+
+
+                    <div class="capacitacion-detalle" id="detalle-educacion-digital" hidden>
+
+                        <div class="capacitacion-detalle-contenido">
+
+                            <p>
+                                En esta capacitación trabajamos sobre el uso responsable de las tecnologías, la privacidad, la identidad digital y las herramientas para acompañar a chicos y chicas en internet.
+                            </p>
+
+                            <p>
+                                Reflexionamos sobre cómo funcionan las redes sociales y los videojuegos, qué huella digital dejamos al publicar y compartir, y cómo configurar la privacidad de cuentas y dispositivos. También abordamos el uso de la inteligencia artificial, el pensamiento computacional y el equilibrio en el tiempo de pantalla.
+                            </p>
+
+                            <p>
+                                El objetivo es que docentes, familias y adolescentes cuenten con recursos concretos para acompañar y tomar decisiones informadas en el entorno digital.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CAPACITACIÓN 02: PREVENCIÓN DE LA VIOLENCIA DIGITAL -->
+
+                <article
+                    class="capacitacion-card capacitacion-violencia"
+                    data-tema="violencia-digital"
+                    data-publico="docentes familias ninos"
+                >
+
+                    <div class="capacitacion-imagen">
+
+                        <!-- IMAGEN: capacitacion_violencia_digital.jpg -->
+
+                        <div
+                            class="imagen-placeholder"
+                            data-imagen="capacitacion_violencia_digital.jpg">
+                        </div>
+
+                    </div>
+
+
+                    <div class="capacitacion-informacion">
+
+                        <h3>PREVENCIÓN DE LA VIOLENCIA DIGITAL</h3>
+
+                        <p>
+                            Abordamos problemáticas como el ciberbullying,
+                            el grooming y la difusión de contenido sin
+                            consentimiento, ofreciendo herramientas para
+                            reconocer riesgos, prevenir situaciones de
+                            violencia y actuar frente a ellas.
+                        </p>
+
+                        <span class="capacitacion-publico">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            Docentes, familias y adolescentes
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="capacitacion-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="detalle-violencia-digital"
+                        aria-label="Ver más sobre Prevención de la Violencia Digital"
+                    >
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+
+
+                    <div class="capacitacion-detalle" id="detalle-violencia-digital" hidden>
+
+                        <div class="capacitacion-detalle-contenido">
+
+                            <p>
+                                Trabajamos sobre la identificación de situaciones de violencia digital, la prevención, el acompañamiento y los recursos disponibles para actuar ante estos casos.
+                            </p>
+
+                            <p>
+                                Abordamos el ciberbullying, el grooming y la difusión de contenido sin consentimiento: cómo reconocer las señales de alerta, qué hacer si ocurre una situación de este tipo, cómo acompañar a quien la vive y a quién recurrir.
+                            </p>
+
+                            <p>
+                                Además, fortalecemos el rol de las escuelas y las familias en la prevención y en la construcción de entornos digitales más cuidados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CAPACITACIÓN 03: EDUCACIÓN SEXUAL INTEGRAL -->
+
+                <article
+                    class="capacitacion-card capacitacion-esi"
+                    data-tema="esi"
+                    data-publico="docentes familias ninos"
+                >
+
+                    <div class="capacitacion-imagen">
+
+                        <!-- IMAGEN: capacitacion_esi.jpg -->
+
+                        <div
+                            class="imagen-placeholder"
+                            data-imagen="capacitacion_esi.jpg">
+                        </div>
+
+                    </div>
+
+
+                    <div class="capacitacion-informacion">
+
+                        <h3>EDUCACIÓN SEXUAL INTEGRAL (ESI)</h3>
+
+                        <p>
+                            Promovemos espacios de reflexión y aprendizaje
+                            sobre el cuidado del cuerpo, los vínculos
+                            saludables, el respeto por la diversidad y
+                            el ejercicio de los derechos de niños,
+                            niñas y adolescentes.
+                        </p>
+
+                        <span class="capacitacion-publico">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            Docentes, familias y adolescentes
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="capacitacion-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="detalle-esi"
+                        aria-label="Ver más sobre Educación Sexual Integral"
+                    >
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+
+
+                    <div class="capacitacion-detalle" id="detalle-esi" hidden>
+
+                        <div class="capacitacion-detalle-contenido">
+
+                            <p>
+                                Abordamos los ejes de la Educación Sexual Integral, promoviendo el respeto, la igualdad, el cuidado del cuerpo y la construcción de vínculos saludables.
+                            </p>
+
+                            <p>
+                                Trabajamos el cuidado del cuerpo, el consentimiento, los vínculos basados en el respeto y el reconocimiento de situaciones de vulneración de derechos, con un enfoque adecuado a cada edad.
+                            </p>
+
+                            <p>
+                                También ofrecemos herramientas para que docentes y familias puedan dialogar con niños, niñas y adolescentes con claridad, sin miedo y con información confiable.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FORMULARIO DE SOLICITUD -->
+
+        <section class="capacitaciones-solicitud">
+
+
+            <!-- TEXTO INTRODUCTORIO -->
+
+            <div class="solicitud-texto">
+
+                <div class="solicitud-icono">
+                    <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+                </div>
+
+                <h2>
+                    ¿Querés solicitar
+                    <br>
+                    una capacitación?
+                </h2>
+
+                <p>
+                    Conocé nuestras actividades para acompañar
+                    a los chicos en su día a día.
+                </p>
+
+            </div>
+
+
+
+            <!-- FORMULARIO -->
+
+            <div class="solicitud-formulario">
+
+                <form class="formulario-capacitaciones">
+
+                    <div class="solicitud-campo">
+
+                        <label for="solicitud-nombre">
+                            NOMBRE <span>*</span>
+                        </label>
+
+                        <div class="solicitud-input">
+
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+
+                            <input
+                                type="text"
+                                id="solicitud-nombre"
+                                name="nombre"
+                                placeholder="TU NOMBRE"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="solicitud-campo">
+
+                        <label for="solicitud-email">
+                            EMAIL <span>*</span>
+                        </label>
+
+                        <div class="solicitud-input">
+
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+
+                            <input
+                                type="email"
+                                id="solicitud-email"
+                                name="email"
+                                placeholder="TU EMAIL"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="solicitud-campo">
+
+                        <label for="solicitud-telefono">
+                            TELÉFONO <span>*</span>
+                        </label>
+
+                        <div class="solicitud-input">
+
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+                            <input
+                                type="tel"
+                                id="solicitud-telefono"
+                                name="telefono"
+                                placeholder="TU TELÉFONO"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="solicitud-campo">
+
+                        <label for="tipo-capacitacion">
+                            ¿QUÉ TIPO DE CAPACITACIÓN ESTÁS BUSCANDO? <span>*</span>
+                        </label>
+
+                        <div class="solicitud-input">
+
+                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+
+                            <select
+                                id="tipo-capacitacion"
+                                name="capacitacion"
+                                required
+                            >
+
+                                <option value="" disabled selected>
+                                    SELECCIONÁ UNA OPCIÓN
+                                </option>
+
+                                <option value="educacion-digital">
+                                    Educación Digital Segura
+                                </option>
+
+                                <option value="violencia-digital">
+                                    Prevención de la Violencia Digital
+                                </option>
+
+                                <option value="esi">
+                                    Educación Sexual Integral (ESI)
+                                </option>
+
+                                <option value="otra">
+                                    Otra capacitación
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="solicitud-campo">
+
+                        <label for="solicitud-mensaje">
+                            MENSAJE
+                        </label>
+
+                        <textarea
+                            id="solicitud-mensaje"
+                            name="mensaje"
+                            placeholder="CONTANOS MÁS SOBRE LO QUE NECESITÁS..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="solicitud-button">
+
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+
+                        ENVIAR
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         03. FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- LOGO Y CONTACTO -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img
+                        src="assets/images/logo-infancia-sana.svg?v=3"
+                        alt="Infancia Sana"
+                    >
+
+                </a>
+
+
+                <div class="footer-social">
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_facebook.svg" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_instagram.svg" alt="Instagram">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_twitter.svg" alt="Twitter">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_youtube.svg" alt="YouTube">
+                    </a>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <a href="mailto:grupo@infanciasana.com.ar">
+                        <img src="assets/images/icon_mail.svg" alt="">
+                        grupo@infanciasana.com.ar
+                    </a>
+
+                    <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_wsp.svg" alt="">
+                        +54 9 11 4167-0806
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="footer-nav">
+
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="recursos.html">RECURSOS</a>
+                <a href="programas.html">PROGRAMAS</a>
+                <a href="capacitaciones.html">CAPACITACIONES</a>
+                <a href="novedades.html">NOVEDADES</a>
+                <a href="contacto.html">CONTACTO</a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         04. JAVASCRIPT
+    ================================================== -->
+
+    <script src="JS/script.js"></script>
+    <script src="JS/capacitaciones.js"></script>
+
+</body>
+
+</html>

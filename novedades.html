@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novedades | Infancia Sana</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/novedad-card.css">
+    <link rel="stylesheet" href="css/novedades.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         01. ENCABEZADO
+    ================================================== -->
+
+    <header class="header header-novedades">
+
+        <div class="header-background">
+
+            <!-- IMAGEN: novedades_header.jpg -->
+            <div
+                class="header-image header-image-placeholder"
+                data-imagen="novedades_header.jpg">
+            </div>
+
+            <!-- GRADIENTE PROPIO -->
+            <div class="header-gradient header-gradient-novedades"></div>
+
+            <!-- TEXTURA COMPARTIDA -->
+            <div class="header-texture"></div>
+
+        </div>
+
+
+        <!-- CONTACTO -->
+
+        <div class="header-contact">
+
+            <a href="mailto:grupo@infanciasana.com.ar">
+                <img src="assets/images/icon_mail.svg" alt="Correo electrónico">
+                <span>grupo@infanciasana.com.ar</span>
+            </a>
+
+            <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_wsp.svg" alt="WhatsApp">
+                <span>+54 9 11 4167-0806</span>
+            </a>
+
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+
+        <div class="header-social">
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_twitter.svg" alt="Twitter">
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/icon_youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/logo-infancia-sana.svg?v=3"
+                    alt="Infancia Sana"
+                    class="logo-normal"
+                >
+
+                <img
+                    src="assets/images/logo-infancia-sana-color.svg"
+                    alt=""
+                    class="logo-color"
+                >
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="recursos.html">RECURSOS</a></li>
+                <li><a href="programas.html">PROGRAMAS</a></li>
+                <li><a href="capacitaciones.html">CAPACITACIONES</a></li>
+                <li><a href="novedades.html" class="activo">NOVEDADES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- TÍTULO -->
+
+        <div class="header-content">
+            <h1>NOVEDADES</h1>
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         02. CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main class="novedades-main">
+
+        <section class="novedades-contenido">
+
+            <!-- PRESENTACIÓN -->
+
+            <div class="novedades-presentacion">
+
+                <h2>
+                    <span class="linea-amarilla">
+                        Enterate de las últimas noticias, actividades
+                    </span>
+                    <span class="linea-celeste">
+                        y novedades para una Infancia Sana.
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <!-- TARJETAS (se generan desde JS/novedades-data.js) -->
+
+            <div class="novedades-grid" aria-live="polite"></div>
+
+
+            <!-- PAGINACIÓN -->
+
+            <nav class="novedades-paginas" aria-label="Páginas de novedades" hidden></nav>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         03. FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- LOGO Y CONTACTO -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img
+                        src="assets/images/logo-infancia-sana.svg?v=3"
+                        alt="Infancia Sana"
+                    >
+
+                </a>
+
+
+                <div class="footer-social">
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_facebook.svg" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/infanciasana.ar/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_instagram.svg" alt="Instagram">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_twitter.svg" alt="Twitter">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_youtube.svg" alt="YouTube">
+                    </a>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <a href="mailto:grupo@infanciasana.com.ar">
+                        <img src="assets/images/icon_mail.svg" alt="">
+                        grupo@infanciasana.com.ar
+                    </a>
+
+                    <a href="https://wa.me/5491141670806" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/icon_wsp.svg" alt="">
+                        +54 9 11 4167-0806
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="footer-nav">
+
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="recursos.html">RECURSOS</a>
+                <a href="programas.html">PROGRAMAS</a>
+                <a href="capacitaciones.html">CAPACITACIONES</a>
+                <a href="novedades.html">NOVEDADES</a>
+                <a href="contacto.html">CONTACTO</a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         04. JAVASCRIPT
+    ================================================== -->
+
+    <script src="JS/novedades-data.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/novedades.js"></script>
+
+</body>
+
+</html>
