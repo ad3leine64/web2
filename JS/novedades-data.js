@@ -56,14 +56,13 @@ window.InfanciaSana = window.InfanciaSana || {};
 
         {
             tipo: "programas",
-            etiqueta: "Programas",
+            etiqueta: "Qué hacemos",
             titulo: "Acompañamos el crecimiento de las infancias",
             texto:
-                "Conocé nuestros programas e iniciativas para informar, " +
-                "concientizar y proteger los derechos de niños, niñas " +
-                "y adolescentes.",
+                "Conocé cómo informamos, concientizamos y protegemos " +
+                "los derechos de niños, niñas y adolescentes.",
             imagen: "novedad_programas.jpg",
-            enlace: "programas.html",
+            enlace: "que-hacemos.html",
             en: ["home", "novedades"]
         },
 

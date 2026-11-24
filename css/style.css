@@ -240,7 +240,7 @@ img {
 
 /* TELÉFONO: A LA DERECHA DEL CORREO */
 .header-contact a:last-child {
-    margin-left: calc(clamp(85px, 10.5vw, 145px) + 40px);
+    margin-left: calc(clamp(85px, 10.5vw, 145px) + 60px);
     white-space: nowrap;
 }
 
@@ -248,21 +248,22 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 9px;
 
     color: var(--blanco);
     text-decoration: none;
 
     font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(8px, 0.75vw, 12px);
+    /* Mínimo 12px: antes llegaba a 8px en pantallas chicas */
+    font-size: clamp(12px, 0.35vw + 8px, 15px);
     font-weight: 700;
 }
 
 .header-contact img {
     display: block;
     flex-shrink: 0;
-    width: clamp(12px, 1.1vw, 17px);
-    height: clamp(12px, 1.1vw, 17px);
+    width: clamp(14px, 1.1vw, 19px);
+    height: clamp(14px, 1.1vw, 19px);
     object-fit: contain;
 }
 
@@ -278,7 +279,7 @@ img {
 
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 16px;
 }
 
 .header-social a {
@@ -289,8 +290,8 @@ img {
 
 .header-social img {
     display: block;
-    width: clamp(13px, 1.2vw, 19px);
-    height: clamp(13px, 1.2vw, 19px);
+    width: clamp(17px, 1.3vw, 23px);
+    height: clamp(17px, 1.3vw, 23px);
     object-fit: contain;
 
     transition: opacity 0.2s ease;
@@ -337,7 +338,7 @@ img {
 
     display: flex;
     align-items: center;
-    gap: clamp(12px, 2vw, 30px);
+    gap: clamp(14px, 2vw, 32px);
 
     list-style: none;
     pointer-events: auto;
@@ -349,7 +350,8 @@ img {
     white-space: nowrap;
 
     font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(9px, 0.9vw, 14px);
+    /* Mínimo 12.5px: antes llegaba a 9px en pantallas chicas */
+    font-size: clamp(12.5px, 0.5vw + 7px, 17px);
     font-weight: 700;
 
     transition: opacity 0.2s ease;
@@ -386,11 +388,11 @@ img {
 /* Descripción: Frutiger Light */
 
 .header-content p {
-    max-width: 520px;
+    max-width: 560px;
     margin-top: 0.6vw;
 
     font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(9px, 0.8vw, 13px);
+    font-size: clamp(12px, 0.35vw + 8.5px, 16px);
     font-weight: 300;
     line-height: 1.3;
 }
@@ -402,8 +404,8 @@ img {
     align-items: center;
     justify-content: center;
 
-    margin-top: 1.2vw;
-    padding: 0.7vw 2.4vw;
+    margin-top: clamp(12px, 1.2vw, 20px);
+    padding: clamp(8px, 0.7vw, 12px) clamp(22px, 2.4vw, 38px);
 
     background-color: var(--azul-principal);
     border-radius: 9px;
@@ -412,7 +414,7 @@ img {
     text-decoration: none;
 
     font-family: 'Frutiger', 'Frutiger LT Std', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    font-size: clamp(8px, 0.85vw, 13px);
+    font-size: clamp(12px, 0.3vw + 8px, 15px);
     font-weight: 700;
 
     transition: background-color 0.2s ease;
@@ -475,11 +477,22 @@ footer {
     .header-contact {
         top: 3%;
         left: 5%;
-        gap: 10px;
+        gap: 18px;
+    }
+
+    /* En tablet el correo y el teléfono van en fila, sin centrar sobre el logo */
+
+    .header-contact a:first-child {
+        position: static;
+        width: auto;
+    }
+
+    .header-contact a:last-child {
+        margin-left: 0;
     }
 
     .header-contact a {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     /* Redes */
@@ -514,7 +527,7 @@ footer {
     }
 
     .nav-links a {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     /* Texto */
@@ -530,7 +543,7 @@ footer {
     }
 
     .header-content p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -565,11 +578,11 @@ footer {
 
     .nav-links {
         top: 29%;
-        gap: 10px;
+        gap: 8px 14px;
     }
 
     .nav-links a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     /* Texto */
@@ -583,12 +596,12 @@ footer {
     }
 
     .header-content p {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .header-button {
-        padding: 9px 24px;
-        font-size: 10px;
+        padding: 10px 26px;
+        font-size: 12px;
     }
 }
 
@@ -838,18 +851,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 7px;
 
     color: #F9F9F4;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
 }
 
 .footer-contact img {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
@@ -868,7 +881,7 @@ footer {
 .footer-nav a {
     color: #F9F9F4;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     white-space: nowrap;
     transition: opacity 0.2s ease;
@@ -900,7 +913,7 @@ footer {
     }
 
     .footer-nav a {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 
@@ -971,11 +984,11 @@ footer {
     }
 
     .footer-nav {
-        gap: 15px 18px;
+        gap: 15px 20px;
     }
 
     .footer-nav a {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 
@@ -1404,11 +1417,11 @@ main section.pilares {
 }
 
 .prevencion-intro {
-    max-width: 530px;
+    max-width: 620px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.35;
 }
 
 /* ESTADÍSTICAS */
@@ -1443,11 +1456,11 @@ main section.pilares {
 }
 
 .estadistica-central p {
-    max-width: 250px;
-    margin-top: 8px;
-    font-size: 9px;
-    font-weight: 300;
-    line-height: 1.4;
+    max-width: 330px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
     text-align: center;
 }
 
@@ -1853,63 +1866,77 @@ main section.pilares {
 }
 
 /* ==================================================
-   EFECTOS EXTRA DEL LOGO
+   EFECTO DEL LOGO
+   Al pasar el cursor: aparece el logo a color con un contorno
+   blanco y una sombra suave (sin resplandor), y sube un poco.
 ================================================== */
 
 .logo {
     position: absolute;
     isolation: isolate;
 
-    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Resplandor */
-.logo::before {
-    content: "";
-    position: absolute;
+/* Estado inicial: mismos filtros pero invisibles,
+   para que el cambio se anime de forma suave. */
 
-    width: 180%;
-    height: 180%;
-    top: -40%;
-    left: -40%;
-
-    z-index: -1;
-    border-radius: 50%;
-
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.85) 0%,
-        rgba(130, 205, 235, 0.65) 25%,
-        rgba(40, 140, 190, 0.35) 50%,
-        transparent 75%
-    );
-
-    filter: blur(30px);
-
-    opacity: 0;
-    transform: scale(0.7);
+.logo-color {
+    filter:
+        drop-shadow(0 0 0 rgba(255, 255, 255, 0))
+        drop-shadow(0 0 0 rgba(255, 255, 255, 0))
+        drop-shadow(0 0 0 rgba(255, 255, 255, 0))
+        drop-shadow(0 0 0 rgba(255, 255, 255, 0))
+        drop-shadow(0 0 0 rgba(16, 43, 67, 0));
 
     transition:
-        opacity 0.55s ease,
-        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-
-    pointer-events: none;
+        opacity 0.35s ease,
+        filter 0.35s ease;
 }
 
-/* Activación */
-.logo:hover {
-    transform: scale(1.06);
+/* Activación (mouse o teclado) */
+
+.logo:hover,
+.logo:focus-visible {
+    transform: translateY(-2px) scale(1.06);
 }
 
-.logo:hover::before {
-    opacity: 1;
-    transform: scale(1);
+.logo:hover .logo-color,
+.logo:focus-visible .logo-color {
+    filter:
+        drop-shadow(2px 0 0 #FFFFFF)
+        drop-shadow(-2px 0 0 #FFFFFF)
+        drop-shadow(0 2px 0 #FFFFFF)
+        drop-shadow(0 -2px 0 #FFFFFF)
+        drop-shadow(0 7px 9px rgba(16, 43, 67, 0.4));
 }
 
 /* Accesibilidad */
+
 @media (prefers-reduced-motion: reduce) {
     .logo,
-    .logo::before {
+    .logo-color {
         transition: none;
     }
+}
+
+
+/* ==================================================
+   HEADER EN PANTALLAS ANGOSTAS
+   Va al final para que prevalezca sobre la posición
+   del logo definida más arriba.
+================================================== */
+
+@media (max-width: 560px) {
+
+    .header-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .logo {
+        top: 66px;
+    }
+
 }
